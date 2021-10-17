@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# notEasy v1.0
+# noteasy v1.0
 # Coded by @esiquiel
 
 # Dependencies
@@ -7,8 +7,6 @@ import argparse
 import string
 import random
 import os
-
-from time import sleep
 
 try:
     import clipboard as c
@@ -28,11 +26,13 @@ class Colors:
     WHITE = '\033[37m'
     RED = '\033[31m'
 
+
 # Clear the terminal
 def refresh():
     os.system('cls' if os.name == 'nt' else 'clear')
     banner = open('banner.txt', 'r').read()
     print(Colors.MAGENTA, banner, Colors.WHITE)
+
 
 # Generate the password
 def generate(length):
@@ -52,6 +52,7 @@ def generate(length):
     passwd = "".join(password)
 
     return passwd
+
 
 # Copy to the clipboard
 def clipboard(passwd):
@@ -74,7 +75,6 @@ def save(passwd):
         print(f' Error saving to a file...')
         print(f'-----------------------------------')
         print(Colors.WHITE, e)
-
 
 
 if __name__ == '__main__':
