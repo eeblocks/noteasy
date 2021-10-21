@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# noteasy v1.0
+# noteasy v1.1
 # Coded by @esiquiel
 
 # Dependencies
@@ -37,10 +37,10 @@ def refresh():
 # Generate the password
 def generate(length):
 
-    characters = list(string.ascii_letters + string.digits + "!@#$%&()")
+    characters = list(string.ascii_letters + string.digits + "!@:#:$:%:&:()")
 
     if length < 15:
-        characters = list(string.ascii_letters + string.digits + "@@0123456789@@")
+        characters = list(string.ascii_letters + string.digits + "@0:1:2:3:45:6:7:8:9@")
 
     random.shuffle(characters)
 
